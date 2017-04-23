@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: ng-select
+# key: select
+# --
+<select class="form-control"
+ng-options="${1:item} as $1 for $1 in ${2:items}"
+ng-model="${3:some.property}"></select>

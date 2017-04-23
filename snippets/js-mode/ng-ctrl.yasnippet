@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name: ctrl
+# key: ctrl
+# --
+angular.module('${1:ModuleName}').controller('${2:`(file-name-base (buffer-file-name))`}',[
+	'$scope',
+	function($scope){
+		$0
+	}
+]);

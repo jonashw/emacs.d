@@ -1,0 +1,12 @@
+# Managed packages
+elpa/
+
+# Machine-specific MRUs
+bookmarks
+ido.last
+
+# Backup files
+auto-save-list/
+*~
+.#*
+*#

@@ -1,0 +1,37 @@
+# -*- mode: snippet -*-
+# name: modalCtrl
+# key: modalCtrl
+# --
+angular.module('${1:ModuleName}').controller('${2:`(file-name-base (buffer-file-name))`}',[
+	'$scope',
+	'$modalInstance',
+	'${3:YourDataService}',
+	'Toast',
+	'ErrorText',
+	function($scope,$modalInstance,Data,Toast,ErrorText){
+		${4}
+		$scope.save = function(){
+			$scope.saving = true;
+			$scope.error = null;
+			Data.save().then(function(result){
+				if(result.Success){
+					Toast.success('success!');
+					$modalInstance.close(result.Right);
+				} else {
+					error(result.Left);
+				}
+			},function(){
+				error();
+			});
+
+			function error(msg){
+				$scope.error = ErrorText('There was an error',msg);
+				$scope.saving = false;
+			}
+		};
+
+		$scope.cancel = function(){
+			$modalInstance.dismiss('cancel');
+		};
+	}
+]);

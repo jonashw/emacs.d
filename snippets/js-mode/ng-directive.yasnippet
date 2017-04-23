@@ -1,0 +1,18 @@
+# -*- mode: snippet -*-
+# name: ng-directive
+# key: directive
+# --
+angular.module('${1:ModuleName}').directive('${2:`(replace-in-string "-directive" "" (file-name-base (buffer-file-name)))`}',[
+	function(){
+		return {
+			restrict: 'A',
+			scope: {
+			},
+			link: function(scope,element,attrs){
+			},
+			controller: ['$scope',function($scope){
+			}],
+			templateUrl: '${3:directory}/$2-directive.html'
+		};
+	}
+]);

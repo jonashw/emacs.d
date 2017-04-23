@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: ng-list-group
+# key: list-group
+# --
+<div class="list-group">
+	<div ng-repeat="${1:item} in ${2:items}" class="list-group-item">
+		{{$1}}$0
+	</div>
+</div>

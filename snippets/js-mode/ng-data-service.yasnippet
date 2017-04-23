@@ -1,0 +1,13 @@
+# -*- mode: snippet -*-
+# name: ng-data-service
+# key: data-service
+# --
+angular.module('${1:ModuleName}').service('${2:ServiceName}',[
+	'$http',
+	'ResponseData',
+	function($http,RD){
+		return {
+			$0
+		};
+	}
+]);

@@ -1,0 +1,13 @@
+# -*- mode: snippet -*-
+# name: ng-data-service.mock
+# key: data-service.mock
+# --
+angular.module('${1:ModuleName}').service('${2:ServiceName}',[
+	'PromiseValue',
+	'Either',
+	function(PV,Either){
+		return {
+			$0
+		};
+	}
+]);
